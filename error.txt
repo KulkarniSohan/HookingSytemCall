@@ -1,0 +1,18 @@
+soham@soham-Inspiron-N5010:~/c/kernelModule/hookingSystemCall$ make
+make -C/lib/modules/3.0.0-12-generic/build M=/home/soham/c/kernelModule/hookingSystemCall modules
+make[1]: Entering directory `/usr/src/linux-headers-3.0.0-12-generic'
+  CC [M]  /home/soham/c/kernelModule/hookingSystemCall/myopen.o
+/home/soham/c/kernelModule/hookingSystemCall/myopen.c: In function ‘set_page_rw’:
+/home/soham/c/kernelModule/hookingSystemCall/myopen.c:33:2: error: implicit declaration of function ‘change_page_attr’ [-Werror=implicit-function-declaration]
+cc1: some warnings being treated as errors
+
+make[2]: *** [/home/soham/c/kernelModule/hookingSystemCall/myopen.o] Error 1
+make[1]: *** [_module_/home/soham/c/kernelModule/hookingSystemCall] Error 2
+make[1]: Leaving directory `/usr/src/linux-headers-3.0.0-12-generic'
+make: *** [all] Error 2
+
+//error while adding my own system call
+scripts/Makefile.build:44: /usr/src/linux-source-3.0.0/hello/Makefile: No such file or directory
+make[1]: *** No rule to make target `/usr/src/linux-source-3.0.0/hello/Makefile'.  Stop.
+make: *** [hello] Error 2
+
